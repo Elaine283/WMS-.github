@@ -4,7 +4,7 @@ on:
   push:
     branches: ["main"]
 
-# 💡 核心消警解決方案：在全域 env 區塊注入 FORCE_JAVASCRIPT_ACTIONS_TO_NODE24 變數
+# 💡 Fire alarm core: Force the Node.js 24 execution environment to be enabled in the entire domain to completely eliminate deprecation alarms
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -33,8 +33,8 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.' # 自動打包當前目錄下的單一整合型 index.html 檔案
+          path: '.'
 
       - name: Deploy to GitHub Pages
-        id: deployment
+        id:deployment
         uses: actions/deploy-pages@v4
