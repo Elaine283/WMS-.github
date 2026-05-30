@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "title": "倉儲管理系統 (WMS) 與庫存最佳化",
+    "subtitle": "結合零售電商倉儲實務與庫存最佳化 · 專題研究報告",
+    "author": "陳玉鳳、洪依辰",
+    "advisor": "褚文明",
+    "department": "勤益科大 行銷與流通管理系所",
+    "year": "2025–2026",
+    "version": "1.3.0"
+  },
+  "kpis": [
+    { "label": "庫存準確率", "value": "98.6%", "delta": "+2.4%", "trend": "up" },
+    { "label": "庫存週轉率", "value": "8.4", "delta": "+12% 次/月", "trend": "up" },
+    { "label": "倉儲利用率", "value": "87%", "delta": "+5%", "trend": "up" },
+    { "label": "缺貨率", "value": "2.1%", "delta": "-0.8%", "trend": "down-good" },
+    { "label": "訂單準時率", "value": "98.6%", "delta": "+2.3%", "trend": "up" },
+    { "label": "揀貨效率", "value": "+35%", "delta": "vs 導入前", "trend": "up" },
+    { "label": "庫存持有成本", "value": "-28%", "delta": "EOQ 優化", "trend": "down-good" },
+    { "label": "入出庫處理時間", "value": "-42%", "delta": "平均 4.2h", "trend": "down-good" }
+  ],
+  "charts": {
+    "turnoverTrend": {
+      "labels": ["11月", "12月", "1月", "2月", "3月", "4月"],
+      "datasets": [
+        { "label": "庫存週轉率（次/月）", "data": [6.2, 6.8, 7.1, 7.5, 8.0, 8.4] },
+        { "label": "導入前基準", "data": [5.4, 5.5, 5.6, 5.7, 5.8, 5.9] }
+      ]
+    },
+    "inboundOutbound": {
+      "labels": ["11月", "12月", "1月", "2月", "3月", "4月"],
+      "datasets": [
+        { "label": "入庫（千件）", "data": [42, 55, 48, 61, 57, 64] },
+        { "label": "出庫（千件）", "data": [38, 50, 45, 58, 53, 62] }
+      ]
+    },
+    "inventoryComparison": {
+      "labels": ["入庫", "出庫", "盤點差異", "退貨", "調撥"],
+      "data": [6400, 6200, 128, 286, 412]
+    },
+    "abcDistribution": {
+      "labels": ["A 類（80% 金額）", "B 類（15%）", "C 類（5%）"],
+      "data": [80, 15, 5]
+    },
+    "warehouseUtilization": {
+      "labels": ["A 倉電子", "B 倉美妝", "C 倉食品", "D 倉服飾", "E 倉雜貨"],
+      "data": [92, 78, 58, 85, 71]
+    },
+    "wmsImpact": {
+      "labels": ["作業錯誤率", "出貨處理時間", "庫存準確率", "訂單準時率"],
+      "before": [8.5, 100, 92, 94],
+      "after": [2.1, 58, 98.6, 98.6]
+    }
+  },
+  "timeline": [
+    { "phase": "需求訪談與 WMS 文獻", "period": "Week 1–4", "status": "done" },
+    { "phase": "庫存模型與系統設計", "period": "Week 5–8", "status": "done" },
+    { "phase": "WMS 原型與 Dashboard", "period": "Week 9–14", "status": "done" },
+    { "phase": "模擬測試與 KPI 驗證", "period": "Week 15–18", "status": "active" },
+    { "phase": "專題報告撰寫", "period": "Week 19–20", "status": "pending" }
+  ]
+}
