@@ -4,7 +4,7 @@ on:
   push:
     branches: ["main"]
 
-# 💡 全域強制啟用 Node.js 24 執行環境，完全消除任何 Actions 棄用警告
+# 💡 核心消警解決方案：在全域 env 區塊注入 FORCE_JAVASCRIPT_ACTIONS_TO_NODE24 變數
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -33,7 +33,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.' # 打包當前目錄下的單一 index.html 檔案
+          path: '.' # 自動打包當前目錄下的單一整合型 index.html 檔案
 
       - name: Deploy to GitHub Pages
         id: deployment
