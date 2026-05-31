@@ -4,7 +4,6 @@ on:
   push:
     branches: ["main"]
 
-# 💡 Fire alarm core: Force the Node.js 24 execution environment to be enabled in the entire domain to completely eliminate deprecation alarms
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
